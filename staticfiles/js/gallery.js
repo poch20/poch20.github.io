@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
   const musicButton = document.getElementById('music-button');
   let isPlaying = false;
-  const audio = new Audio('staticfiles/music/lofi.mp3');
+  const spotifyPlayer = document.getElementById('spotify-player');
 
+  // Spotify toggle functionality
   musicButton.addEventListener('click', () => {
-    if (isPlaying) {
-      audio.pause();
-      musicButton.textContent = 'Play Lo-Fi';
+    if (spotifyPlayer.style.display === 'none' || spotifyPlayer.style.display === '') {
+      spotifyPlayer.style.display = 'block';
+      musicButton.textContent = 'Pause Spotify';
     } else {
-      audio.play();
-      musicButton.textContent = 'Pause Lo-Fi';
+      spotifyPlayer.style.display = 'none';
+      musicButton.textContent = 'Play Lo-Fi';
     }
-    isPlaying = !isPlaying;
   });
 
   const galleryImages = document.querySelectorAll('.gallery-img');
