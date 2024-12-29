@@ -1,23 +1,52 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const musicButton = document.getElementById('music-button');
-  let isPlaying = false;
-  const audio = new Audio('staticfiles/music/lofi.mp3');
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #1f1c2c, #928dab);
+  color: #ddd;
+}
 
-  musicButton.addEventListener('click', () => {
-    if (isPlaying) {
-      audio.pause();
-      musicButton.textContent = 'Play Lo-Fi';
-    } else {
-      audio.play();
-      musicButton.textContent = 'Pause Lo-Fi';
-    }
-    isPlaying = !isPlaying;
-  });
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-  const galleryImages = document.querySelectorAll('.gallery-img');
-  galleryImages.forEach(img => {
-    img.addEventListener('click', () => {
-      alert(`This feature will expand soon!`);
-    });
-  });
-});
+h1 {
+  font-size: 2.5em;
+  color: #ff6347;
+  text-shadow: 0 0 10px rgba(255, 99, 71, 0.8);
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery-img {
+  max-width: 100px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4500;
+}
