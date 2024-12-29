@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Showcase for Anna</title>
-  <link rel="stylesheet" href="staticfiles/css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna's Showcase</title>
+    <link rel="stylesheet" href="staticfiles/css/main.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to Anna's World</h1>
-    <p>Your personalized showcase experience</p>
-  </header>
-  
-  <main>
-    <section id="introduction">
-      <h2>Discover Anna's Interests</h2>
-      <p>Let's explore her creativity, passions, and dreams.</p>
-    </section>
-    
-    <section id="gallery">
-      <h2>Featured Highlights</h2>
-      <div class="gallery-container">
-        <img src="staticfiles/img/DALL·E 20241229.webp" alt="Highlight 1">
-        <img src="images/sample2.jpg" alt="Highlight 2">
-        <img src="images/sample3.jpg" alt="Highlight 3">
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <p>&copy; 2024 Interactive Showcase for Anna</p>
-    <audio controls autoplay loop>
-      <source src="music/track.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  </footer>
-  
-  <script src="staticfiles/js/gallery.js"></script>
+    <header>
+        <h1>Welcome to Anna's World</h1>
+        <p>Your personalized showcase experience</p>
+    </header>
+    <main>
+        <section>
+            <h2>Discover Anna's Interests</h2>
+            <p>Let's explore her creativity, passions, and dreams.</p>
+        </section>
+        <section class="gallery-container">
+            <img src="staticfiles/img/DALL·E 20241229.webp" alt="Highlight 1">
+            <img src="images/sample2.jpg" alt="Highlight 2">
+            <img src="images/sample3.jpg" alt="Highlight 3">
+        </section>
+    </main>
+    <footer>
+        <audio id="bgMusic" loop>
+            <source src="music/track.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="musicToggle">Play Music</button>
+        <p>© 2024 Interactive Showcase for Anna</p>
+    </footer>
+    <script src="staticfiles/js/gallery.js"></script>
 </body>
 </html>
