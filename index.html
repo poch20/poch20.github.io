@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anna's Chill Spot</title>
-    <link rel="stylesheet" href="staticfiles/css/main.css">
-    <script src="staticfiles/js/gallery.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Showcase for Anna</title>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Anna's Chill Spot</h1>
-        <p>Your reflective and personal escape</p>
-    </header>
-    <main>
-        <section class="vibes">
-            <h2>Discover Anna's Vibes</h2>
-            <p>Relax, recharge, and enjoy this personalized experience.</p>
-            <div class="gallery-container">
-                <img src="staticfiles/img/DALL·E 20241229.webp" alt="Highlight 1">
-                <img src="staticfiles/img/highlight2.jpg" alt="Highlight 2">
-                <img src="staticfiles/img/highlight3.jpg" alt="Highlight 3">
-            </div>
-        </section>
-        <section class="thoughts">
-            <h2>Anna's Thoughts</h2>
-            <p>"Sometimes, a quiet escape is all you need to reflect and recharge."</p>
-            <p>"Moments of stillness, even with a puff of smoke, bring clarity."</p>
-        </section>
-        <div class="music-controls">
-            <button id="music-button">Play Lo-Fi</button>
-        </div>
-    </main>
-    <footer>
-        <p>© 2024 Interactive Showcase for Anna</p>
-    </footer>
+  <header>
+    <h1>Welcome to Anna's World</h1>
+    <p>Your personalized showcase experience</p>
+  </header>
+  
+  <main>
+    <section id="introduction">
+      <h2>Discover Anna's Interests</h2>
+      <p>Let's explore her creativity, passions, and dreams.</p>
+    </section>
+    
+    <section id="gallery">
+      <h2>Featured Highlights</h2>
+      <div class="gallery-container">
+        <img src="staticfiles/img/DALL·E 20241229.webp" alt="Highlight 1">
+        <img src="staticfiles/img/cozy bar set.webp" alt="Highlight 2">
+        <img src="images/sample3.jpg" alt="Highlight 3">
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Interactive Showcase for Anna</p>
+    <audio controls autoplay loop>
+      <source src="music/track.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </footer>
+  
+  <script src="scripts/gallery.js"></script>
 </body>
 </html>
