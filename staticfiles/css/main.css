@@ -1,75 +1,23 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom right, #1f1b24, #543864);
-    color: #fff;
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const musicButton = document.getElementById('music-button');
+  let isPlaying = false;
+  const audio = new Audio('staticfiles/music/lofi.mp3');
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #1c1a22;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
-}
+  musicButton.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+      musicButton.textContent = 'Play Lo-Fi';
+    } else {
+      audio.play();
+      musicButton.textContent = 'Pause Lo-Fi';
+    }
+    isPlaying = !isPlaying;
+  });
 
-header h1 {
-    font-size: 2.5rem;
-    text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61;
-}
-
-header p {
-    font-size: 1.2rem;
-    color: #b5b3c1;
-}
-
-.vibes {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.gallery-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.gallery-container img {
-    max-width: 100px;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.gallery-container img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 111, 97, 0.7);
-}
-
-.thoughts {
-    text-align: center;
-    margin: 30px 20px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-.music-controls {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.music-controls button {
-    background-color: #ff6f61;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.music-controls button:hover {
-    background-color: #e65c50;
-    box-shadow: 0 0 10px #ff6f61;
-}
+  const galleryImages = document.querySelectorAll('.gallery-img');
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      alert(`This feature will expand soon!`);
+    });
+  });
+});
