@@ -109,3 +109,15 @@ header p {
     margin: 15px 10px;
   }
 }
+
+
+#spotify-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.spotify-copyright {
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
