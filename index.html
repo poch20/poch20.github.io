@@ -17,8 +17,8 @@
             <h2>Discover Anna's Vibes</h2>
             <p>Relax, recharge, and enjoy this personalized experience.</p>
             <div class="gallery-container">
-              <img src="staticfiles/img/DALL·E 20241229.webp" alt="Highlight 1">
-                <img src="staticfiles/img/cozy bar set.webp" alt="Highlight 2">
+                <img src="staticfiles/img/DALL·E 20241229.webp" alt="Highlight 1">
+                <img src="staticfiles/img/cozy_bar_set.webp" alt="Highlight 2">
                 <img src="staticfiles/img/highlight3.jpg" alt="Highlight 3">
             </div>
         </section>
@@ -28,11 +28,15 @@
             <p>"Moments of stillness, even with a puff of smoke, bring clarity."</p>
         </section>
         <div class="music-controls">
-            <button id="music-button">Play Lo-Fi</button>
+            <button id="music-button" onclick="toggleMusic()">Play Lo-Fi</button>
         </div>
     </main>
     <footer>
         <p>© 2024 Interactive Showcase for Anna</p>
     </footer>
+    <iframe id="spotify-player" src="https://open.spotify.com/embed/track/{SPOTIFY_TRACK_ID}" 
+    width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media">
+</iframe>
+
 </body>
 </html>
