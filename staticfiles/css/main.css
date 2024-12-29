@@ -1,18 +1,17 @@
-/* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
-  color: #333;
+  background: linear-gradient(to bottom right, #2a2a72, #009ffd);
+  color: #fff;
 }
 
-/* Header */
+/* Neon Style Header */
 header {
   text-align: center;
   padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Main Content */
@@ -35,19 +34,25 @@ main {
 
 .gallery-container img:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
-/* Footer */
-footer {
-  text-align: center;
+/* Reflective Section */
+.reflective-thoughts {
+  margin-top: 20px;
   padding: 20px;
-  background-color: #333;
-  color: #fff;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-/* Button Styles */
+.reflective-thoughts p {
+  font-style: italic;
+  margin: 10px 0;
+}
+
+/* Button */
 button {
   background: #ff7e5f;
   border: none;
