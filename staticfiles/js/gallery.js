@@ -1,4 +1,3 @@
-// Toggle Music Functionality
 const audio = document.getElementById('bgMusic');
 const musicToggle = document.getElementById('musicToggle');
 let isPlaying = false;
@@ -6,10 +5,10 @@ let isPlaying = false;
 musicToggle.addEventListener('click', () => {
     if (isPlaying) {
         audio.pause();
-        musicToggle.textContent = "Play Music";
+        musicToggle.textContent = "Play Lo-Fi";
     } else {
         audio.play();
-        musicToggle.textContent = "Pause Music";
+        musicToggle.textContent = "Pause Lo-Fi";
     }
     isPlaying = !isPlaying;
 });
