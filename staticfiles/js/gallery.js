@@ -1,14 +1,16 @@
-const audio = document.getElementById('bgMusic');
-const musicToggle = document.getElementById('musicToggle');
-let isPlaying = false;
+document.addEventListener("DOMContentLoaded", () => {
+    const musicButton = document.getElementById("music-button");
+    let isPlaying = false;
+    const audio = new Audio("staticfiles/audio/lofi.mp3");
 
-musicToggle.addEventListener('click', () => {
-    if (isPlaying) {
-        audio.pause();
-        musicToggle.textContent = "Play Lo-Fi";
-    } else {
-        audio.play();
-        musicToggle.textContent = "Pause Lo-Fi";
-    }
-    isPlaying = !isPlaying;
+    musicButton.addEventListener("click", () => {
+        if (isPlaying) {
+            audio.pause();
+            musicButton.textContent = "Play Lo-Fi";
+        } else {
+            audio.play();
+            musicButton.textContent = "Pause Lo-Fi";
+        }
+        isPlaying = !isPlaying;
+    });
 });
