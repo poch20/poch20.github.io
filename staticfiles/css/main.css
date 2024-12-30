@@ -1,85 +1,104 @@
-/* General Styles */
+/* General Reset */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1e1e1e;
-    color: #fff;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: #eee;
 }
 
 /* Header */
 header {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-}
-header .highlight {
-    color: #ff5c8d;
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
 }
 
-/* SJDM Sweetheart Section */
-.sjdm-sweetheart {
-    text-align: center;
-    padding: 40px;
-    background: linear-gradient(120deg, #ff5c8d, #6a0572);
-    color: #fff;
+header h1 {
+  font-size: 2.5rem;
+  color: #ff69b4; /* Sweet, playful pink */
 }
 
-/* Gallery */
-.gallery {
-    padding: 30px;
-    text-align: center;
+/* Parallax Section */
+.parallax {
+  display: flex;
+  height: 400px;
+  background-image: url('staticfiles/img/parallax-bg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
 }
-.gallery-container img {
-    width: 30%;
-    margin: 10px;
-    border-radius: 8px;
-    transition: transform 0.3s;
+
+/* Sweetheart Section */
+.sweetheart {
+  background-image: url('staticfiles/img/sweetheart-bg.jpg');
 }
-.gallery-container img:hover {
-    transform: scale(1.1);
+
+/* Gallery Section */
+.gallery-bg {
+  background-image: url('staticfiles/img/gallery-bg.jpg');
 }
 
 /* Thoughts Section */
-.thoughts {
-    padding: 30px;
-    text-align: center;
-    background-color: #222;
+.thoughts-bg {
+  background-image: url('staticfiles/img/thoughts-bg.jpg');
 }
 
-/* Spotify */
-.spotify {
-    text-align: center;
-    padding: 20px;
-}
-#spotify-player {
-    display: none;
-    margin: 20px auto;
-    border-radius: 8px;
-}
-#music-button {
-    background-color: #ff5c8d;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-#music-button:hover {
-    background-color: #ff2e6d;
+
+.parallax-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
+/* Highlights */
+.highlights {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
 }
 
-/* Responsive Styles */
+.highlights .highlight img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Music Section */
+.music {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+}
+
+.music button {
+  background-color: #ff69b4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Responsive Adjustment */
 @media (max-width: 768px) {
-    .gallery-container img {
-        width: 80%;
-    }
+  .parallax {
+      background-attachment: scroll; /* Parallax effect disabled on mobile for performance */
+  }
 }
