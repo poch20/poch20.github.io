@@ -4,6 +4,9 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #111;
   color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Header Section */
@@ -16,16 +19,19 @@ header {
 header h1 {
   font-size: 2.5rem;
   color: #ff69b4; /* Sweet, playful pink */
+  margin: 0;
 }
 
 header p {
   font-size: 1.2rem;
   color: #ddd;
+  margin: 5px 0 0;
 }
 
 /* Parallax Section */
 .parallax {
   display: flex;
+  flex-direction: column;
   height: 400px;
   background-attachment: fixed;
   background-position: center;
@@ -38,10 +44,6 @@ header p {
 }
 
 .parallax-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
   font-size: 1.5rem;
@@ -56,6 +58,7 @@ header p {
   font-family: 'Brush Script MT', cursive;
   color: #ff007f;
   text-shadow: 0 0 10px #ff007f, 0 0 20px #ff66b2, 0 0 30px #ff99cc;
+  margin: 0;
 }
 
 .sweetheart-signage .sweetheart-neon {
@@ -64,6 +67,7 @@ header p {
   text-transform: uppercase;
   color: #ff33cc;
   animation: neonGlow 1.5s ease-in-out infinite alternate;
+  text-align: center;
 }
 
 @keyframes neonGlow {
@@ -73,21 +77,6 @@ header p {
   to {
     text-shadow: 0 0 20px #ff33cc, 0 0 30px #ff99ff, 0 0 40px #ff66ff;
   }
-}
-
-/* Gallery Section */
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  padding: 20px;
-}
-
-.gallery-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
 }
 
 /* Spotify Section */
@@ -125,40 +114,4 @@ header p {
   width: 100%;
   max-width: 400px;
   height: 80px;
-  border: none;
-  margin: 20px auto;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .parallax {
-    background-attachment: scroll; /* Disable parallax on mobile for performance */
-  }
-
-  .sweetheart-signage h1 {
-    font-size: 3rem;
-  }
-
-  .sweetheart-signage .sweetheart-neon {
-    font-size: 4rem;
-  }
-
-  .parallax-content {
-    font-size: 1.2rem;
-    padding: 15px;
-  }
-}
-
-@media (max-width: 576px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .gallery-container {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-
-  .spotify {
-    padding: 15px;
-  }
-}
+  mar
