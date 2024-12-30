@@ -30,8 +30,27 @@ header p {
   margin: 5px 0 0;
 }
 
+/* Parallax Container */
+.parallax {
+  position: relative;
+  background: url('your-parallax-image.jpg') no-repeat center center fixed; /* Replace with your strip club vibe background */
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
 
-/* Neon Text Effect for SJDM Sweetheart */
+.parallax-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.7); /* Transparent black for contrast */
+  border-radius: 15px;
+  margin: auto;
+  width: 90%;
+}
+
+/* Neon Text Effect */
 .sweetheart-signage h1 {
   font-size: 3.5rem;
   font-family: 'Brush Script MT', cursive;
@@ -93,12 +112,19 @@ header p {
   }
 }
 
-/* Tight Alignment for Tension */
-.sweetheart-signage {
-  text-align: center;
-  margin: 20px auto;
-  padding: 10px;
-  line-height: 1.2;
+/* Parallax Effect */
+.parallax::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-attachment: fixed;
+  filter: brightness(50%);
+  transform: translateZ(-1px) scale(2);
+  z-index: 0;
 }
 
 
