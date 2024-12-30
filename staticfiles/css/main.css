@@ -13,21 +13,106 @@ body {
 /* Header Section */
 header {
   text-align: center;
-  padding: 20px;
-  background-color: #222;
-  width: 100%;
+  padding: 40px 20px;
+  background-color: #1b1b1b;
+  position: relative;
+  overflow: hidden;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  color: #ff69b4;
-  margin: 0;
+  font-size: 3rem;
+  font-family: 'Brush Script MT', cursive;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(0, 255, 0, 0.8),
+    0 0 30px rgba(0, 0, 255, 0.8),
+    0 0 40px rgba(255, 0, 255, 0.8);
+  animation: rgbPulse 2s infinite alternate;
 }
 
-header p {
-  font-size: 1rem;
-  color: #ddd;
-  margin: 5px 0 0;
+header .highlight {
+  font-size: 3.5rem;
+  color: #ff33cc;
+  font-weight: bold;
+  text-shadow: 
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(255, 255, 0, 0.8),
+    0 0 30px rgba(0, 255, 255, 0.8),
+    0 0 40px rgba(255, 105, 180, 0.8);
+  animation: neonFlicker 1.8s infinite alternate;
+}
+
+/* Sexy & Sassy Tagline */
+header p.sexy-sassy {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #ff69b4;
+  margin-top: 10px;
+  animation: sassyBounce 1.5s ease-in-out infinite alternate;
+  text-shadow: 
+    0 0 5px rgba(255, 105, 180, 0.7),
+    0 0 10px rgba(255, 182, 193, 0.8),
+    0 0 15px rgba(255, 20, 147, 1);
+}
+
+/* Keyframes for RGB Pulse */
+@keyframes rgbPulse {
+  from {
+    text-shadow: 
+      0 0 15px rgba(255, 0, 0, 0.8),
+      0 0 25px rgba(0, 255, 0, 0.8),
+      0 0 35px rgba(0, 0, 255, 0.8),
+      0 0 45px rgba(255, 0, 255, 0.8);
+    transform: scale(1);
+  }
+  to {
+    text-shadow: 
+      0 0 20px rgba(255, 255, 0, 0.8),
+      0 0 30px rgba(0, 255, 255, 0.8),
+      0 0 40px rgba(255, 0, 255, 0.8),
+      0 0 50px rgba(255, 105, 180, 0.8);
+    transform: scale(1.1);
+  }
+}
+
+/* Neon Flicker for SP♥T */
+@keyframes neonFlicker {
+  0%, 100% {
+    color: rgba(255, 51, 204, 0.8);
+    text-shadow: 
+      0 0 5px rgba(255, 0, 0, 0.8),
+      0 0 10px rgba(255, 255, 0, 0.8),
+      0 0 15px rgba(0, 255, 255, 0.8);
+  }
+  50% {
+    color: rgba(255, 105, 180, 1);
+    text-shadow: 
+      0 0 15px rgba(0, 255, 0, 0.8),
+      0 0 20px rgba(255, 0, 255, 0.8),
+      0 0 25px rgba(0, 0, 255, 0.8);
+  }
+}
+
+/* Bouncy Sassy Animation for Tagline */
+@keyframes sassyBounce {
+  from {
+    transform: translateY(-5px);
+    text-shadow: 
+      0 0 5px rgba(255, 20, 147, 0.8),
+      0 0 10px rgba(255, 105, 180, 0.8),
+      0 0 15px rgba(255, 182, 193, 1);
+  }
+  to {
+    transform: translateY(5px);
+    text-shadow: 
+      0 0 10px rgba(255, 182, 193, 1),
+      0 0 15px rgba(255, 20, 147, 0.8),
+      0 0 20px rgba(255, 105, 180, 0.8);
+  }
 }
 
 /* Parallax Container */
