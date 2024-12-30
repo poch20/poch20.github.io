@@ -6,7 +6,7 @@ body {
   color: #eee;
 }
 
-/* Header */
+/* Header Section */
 header {
   text-align: center;
   padding: 20px;
@@ -16,6 +16,11 @@ header {
 header h1 {
   font-size: 2.5rem;
   color: #ff69b4; /* Sweet, playful pink */
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #ddd;
 }
 
 /* Parallax Section */
@@ -46,6 +51,13 @@ header h1 {
 }
 
 /* Neon Text Effect */
+.sweetheart-signage h1 {
+  font-size: 4rem;
+  font-family: 'Brush Script MT', cursive;
+  color: #ff007f;
+  text-shadow: 0 0 10px #ff007f, 0 0 20px #ff66b2, 0 0 30px #ff99cc;
+}
+
 .sweetheart-signage .sweetheart-neon {
   font-size: 5rem;
   font-weight: bold;
@@ -56,10 +68,10 @@ header h1 {
 
 @keyframes neonGlow {
   from {
-      text-shadow: 0 0 10px #ff33cc, 0 0 20px #ff66cc, 0 0 30px #ff99ff;
+    text-shadow: 0 0 10px #ff33cc, 0 0 20px #ff66cc, 0 0 30px #ff99ff;
   }
   to {
-      text-shadow: 0 0 20px #ff33cc, 0 0 30px #ff99ff, 0 0 40px #ff66ff;
+    text-shadow: 0 0 20px #ff33cc, 0 0 30px #ff99ff, 0 0 40px #ff66ff;
   }
 }
 
@@ -110,14 +122,43 @@ header h1 {
   display: none;
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 400px;
+  height: 80px;
+  border: none;
+  margin: 20px auto;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .parallax {
-    background-attachment: scroll;
+    background-attachment: scroll; /* Disable parallax on mobile for performance */
   }
+
+  .sweetheart-signage h1 {
+    font-size: 3rem;
+  }
+
+  .sweetheart-signage .sweetheart-neon {
+    font-size: 4rem;
+  }
+
+  .parallax-content {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
   .gallery-container {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .spotify {
+    padding: 15px;
   }
 }
