@@ -1,16 +1,13 @@
-// Spotify Functionality
-const musicButton = document.getElementById('musicButton');
-const iframe = document.querySelector('.music iframe');
+// Spotify Player Toggle
+const spotifyPlayer = document.getElementById('spotify-player');
+const musicButton = document.getElementById('music-button');
 
 musicButton.addEventListener('click', () => {
-    if (iframe.style.display === 'none') {
-        iframe.style.display = 'block';
-        musicButton.textContent = 'TIGHT'; // Sexy twist!
+    if (spotifyPlayer.style.display === 'none' || spotifyPlayer.style.display === '') {
+        spotifyPlayer.style.display = 'block';
+        musicButton.textContent = 'TIGHT'; // Sexy vibe 😉
     } else {
-        iframe.style.display = 'none';
-        musicButton.textContent = 'SHOW';
+        spotifyPlayer.style.display = 'none';
+        musicButton.textContent = 'SHOW'; // Chill vibe 🥴
     }
 });
-
-// Parallax Debug Note
-// console.log("Parallax and vibes activated!");
