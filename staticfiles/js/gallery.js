@@ -6,7 +6,7 @@ const spotifyPlayer = document.getElementById('spotify-player');
 musicButton.addEventListener('click', () => {
   const isHidden = spotifyPlayer.style.display === 'none' || spotifyPlayer.style.display === '';
   spotifyPlayer.style.display = isHidden ? 'block' : 'none';
-  musicButton.textContent = isHidden ? 'TIGHT' : 'SHOW'; // Clearer button labels
+  musicButton.textContent = isHidden ? 'TIGHT' : 'BUKA'; // Clearer button labels
 });
 
 // Ensure Spotify iframe reloads when toggled
