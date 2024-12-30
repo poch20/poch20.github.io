@@ -1,22 +1,18 @@
 // Spotify Functionality
 const musicButton = document.getElementById('musicButton');
-const iframe = document.querySelector('.music iframe');
+const iframe = document.querySelector('#spotify-player');
 
 musicButton.addEventListener('click', () => {
-    if (iframe.style.display === 'none') {
+    if (!iframe.style.display || iframe.style.display === 'none') {
         iframe.style.display = 'block';
-        musicButton.textContent = 'TIGHT'; // Sexy twist!
+        musicButton.textContent = 'TIGHT'; // Change button text when displayed
     } else {
         iframe.style.display = 'none';
-        musicButton.textContent = 'SHOW';
+        musicButton.textContent = 'SHOW'; // Reset button text when hidden
     }
 });
 
-// Parallax Debug Note
-// console.log("Parallax and vibes activated!");
-
-
-// Fade-in Effect for Parallax Content
+// Scroll-triggered Fade-in Effect
 const parallaxSections = document.querySelectorAll('.parallax-content');
 
 window.addEventListener('scroll', () => {
@@ -34,10 +30,13 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Flicker effect for Sweetheart Neon Sign
+// Sweetheart Neon Flicker Effect
 const sweetheartNeon = document.querySelector('.sweetheart-neon');
 
 setInterval(() => {
     const isVisible = Math.random() > 0.5; // Random flicker effect
     sweetheartNeon.style.opacity = isVisible ? '1' : '0.8';
-}, 300); // Adjust timing for flicker
+}, 300); // Adjust timing for flicker effect
+
+// Debugging Note
+console.log('Parallax and vibes fully activated!');
