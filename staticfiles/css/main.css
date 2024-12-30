@@ -35,9 +35,50 @@ header h1 {
   font-family: Arial, sans-serif;
 }
 
-/* Sweetheart Section */
+/* SJDM Sweetheart Section */
 .sweetheart {
-  background-image: url('staticfiles/img/sweetheart-bg.jpg');
+  background-image: url('staticfiles/img/sexy-bar-bg.jpg'); /* Sexy lounge vibe */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+/* Neon Text Effect for 'Sweetheart' */
+.sweetheart-signage h1 {
+  font-size: 4rem;
+  font-family: 'Brush Script MT', cursive;
+  color: #ff007f;
+  text-shadow: 0 0 10px #ff007f, 0 0 20px #ff66b2, 0 0 30px #ff99cc;
+}
+
+.sweetheart-signage .sweetheart-neon {
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff33cc;
+  animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+/* Neon Glow Animation */
+@keyframes neonGlow {
+  from {
+      text-shadow: 0 0 10px #ff33cc, 0 0 20px #ff66cc, 0 0 30px #ff99ff;
+  }
+  to {
+      text-shadow: 0 0 20px #ff33cc, 0 0 30px #ff99ff, 0 0 40px #ff66ff;
+  }
+}
+
+/* Parallax Background */
+.sweetheart {
+  background-image: url('staticfiles/img/sensual-neon-bg.jpg'); /* Optional: Replace with a sensual bar vibe */
 }
 
 /* Gallery Section */
@@ -100,5 +141,16 @@ header h1 {
 @media (max-width: 768px) {
   .parallax {
       background-attachment: scroll; /* Parallax effect disabled on mobile for performance */
+  }
+}
+
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+  .sweetheart-signage h1 {
+      font-size: 3rem;
+  }
+  .sweetheart-signage .sweetheart-neon {
+      font-size: 4rem;
   }
 }
