@@ -5,42 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anna's Sweet Spot</title>
     <link rel="stylesheet" href="staticfiles/css/main.css">
-    <script defer src="staticfiles/js/gallery.js"></script>
 </head>
 <body>
     <header>
-        <h1>Anna's Sweet SP🌸T</h1>
+        <h1>Anna's Sweet <span class="highlight">SP♥T</span></h1>
         <p>Suss & Sexy</p>
     </header>
-    <main>
-        <!-- Parallax Section -->
-        <section class="parallax">
-            <div class="parallax-content">
-                <h2>SJDM Sweetheart</h2>
-                <p>Your escape for vibes and connection.</p>
-            </div>
-        </section>
-        <!-- Highlights Section -->
-        <section class="highlights">
-            <div class="highlight">
-                <img src="staticfiles/img/DALL·E 20241229.webp" alt="Highlight 1">
-            </div>
-            <div class="highlight">
-                <img src="staticfiles/img/cozy_bar_set.webp" alt="Highlight 2">
-            </div>
-            <div class="highlight">
-                <img src="staticfiles/img/cocktail-dress-in.webp" alt="Highlight 3">
-            </div>
-        </section>
-        <!-- Spotify Section -->
-        <section class="music">
-            <h3>Taste</h3>
-            <iframe src="https://open.spotify.com/embed/track/your-spotify-id" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <button id="musicButton">SHOW</button>
-        </section>
-    </main>
+
+    <!-- SJDM Sweetheart Section -->
+    <section class="sjdm-sweetheart">
+        <h2>SJDM Sweetheart</h2>
+        <p>Your escape for vibes and connection.</p>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <h3>Explore</h3>
+        <p>Relax, recharge, and enjoy this personalized experience.</p>
+        <div class="gallery-container">
+            <img src="staticfiles/img/DALL·E 20241229.webp" alt="Highlight 1">
+            <img src="staticfiles/img/cozy_bar_set.webp" alt="Highlight 2">
+            <img src="staticfiles/img/cocktail-dress-in.webp" alt="Highlight 3">
+        </div>
+    </section>
+
+    <!-- Thoughts Section -->
+    <section class="thoughts">
+        <h3>Mirror</h3>
+        <p>Life is a blend of happy and quiet moments. Here’s a window into what makes Anna, Anna.</p>
+        <h3>Mirage</h3>
+        <p>"Sometimes, a quiet escape is all you need to reflect and recharge."</p>
+        <p>"Moments of stillness, even with a puff of smoke, bring clarity."</p>
+    </section>
+
+    <!-- Spotify Section -->
+    <section class="spotify">
+        <button id="music-button">SHOW</button>
+        <iframe id="spotify-player" src="https://open.spotify.com/embed/track/xyz123"
+                width="300" height="80" frameborder="0" allow="encrypted-media"></iframe>
+    </section>
+
     <footer>
-        <p>© 2024-2025 Anna's Sweet SP🎀T. Crafted with ❤️.</p>
+        <p>© 2024-2025 Anna's Sweet SP🎀T. Crafted with ❤️</p>
     </footer>
+
+    <script src="staticfiles/js/gallery.js"></script>
 </body>
 </html>
