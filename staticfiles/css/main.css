@@ -1,33 +1,24 @@
+/* General Styling */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom right, #121212, #3d3d3d);
   color: #fff;
+  /* Pinagaan yung overall vibe para ma-feel ni Anna na bar-type chill yung design 🥂 */
 }
 
+/* Header */
 header {
   text-align: center;
   padding: 20px;
-  background-color: #1c1a22;
+  background: #111;
+  color: #ff6f61;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+  /* Ginawan ko ng mas defined para standout yung header ✨ */
 }
 
-header h1 {
-  font-size: 2.5rem;
-  text-shadow: 0 0 8px #ff6f61, 0 0 15px #ff6f61;
-}
-
-header p {
-  font-size: 1.2rem;
-  color: #b5b3c1;
-}
-
-.vibes {
-  text-align: center;
-  padding: 40px 20px;
-}
-
+/* Gallery Container */
 .gallery-container {
   display: flex;
   justify-content: center;
@@ -43,17 +34,53 @@ header p {
 .gallery-container img:hover {
   transform: scale(1.15);
   box-shadow: 0 0 15px rgba(255, 111, 97, 0.7);
+  /* Added hover effect for that playful Anna vibe 😏 */
 }
 
-.thoughts {
+/* Parallax Sections */
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  margin: 20px 0;
+}
+
+#sjdm-sweetheart {
+  background-image: url('staticfiles/img/neon-sign.jpg');
+  /* Retro neon para ma-align sa 'SJDM Sweetheart' vibe! 💖 */
+}
+
+#family-story {
+  background-image: url('staticfiles/img/family-reflection.jpg');
+  /* Subtle family vibe without being too dramatic, para balance lang 🎭 */
+}
+
+.neon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.neon-text {
+  font-size: 3rem;
+  color: #ff6f61;
+  text-shadow: 0 0 5px #ff6f61, 0 0 10px #ff6f61, 0 0 20px #ff6f61;
   text-align: center;
-  margin: 30px 20px;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  /* Ginawa kong extra neon-ish para may dating sa retro effect 🪩 */
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  background: #111;
+  padding: 10px;
+  color: #ccc;
+  /* Footer restored and consistent with the bar-chill vibe 🍷 */
+}
+
+/* Spotify Integration */
 .music-controls {
   text-align: center;
   margin: 20px 0;
@@ -72,40 +99,27 @@ header p {
 .music-controls button:hover {
   background-color: #e65c50;
   box-shadow: 0 0 10px #ff6f61, 0 0 20px #e65c50;
+  /* Ginawa kong cohesive ang design para consistent 🧑‍🎤 */
 }
 
 #spotify-player {
-  display: none; /* Initially hidden */
+  display: none;
   margin: 20px auto;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   width: 100%;
-  max-width: 400px; /* Limit player width */
+  max-width: 400px;
+  /* Spotify player responsive and ready to vibe 🎧 */
 }
 
-/* Responsive Adjustments for Viewport */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .gallery-container img {
     max-width: 80px;
   }
-  .thoughts {
-    font-size: 0.9rem;
-    margin: 20px 10px;
-  }
   .music-controls button {
     padding: 8px 15px;
     font-size: 0.9rem;
-  }
-}
-
-/* Landscape Mode Adjustments */
-@media (orientation: landscape) {
-  .gallery-container img {
-    max-width: 120px;
-  }
-  .thoughts {
-    font-size: 0.85rem;
-    margin: 15px 10px;
   }
 }
