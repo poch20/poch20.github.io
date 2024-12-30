@@ -33,3 +33,11 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Flicker effect for Sweetheart Neon Sign
+const sweetheartNeon = document.querySelector('.sweetheart-neon');
+
+setInterval(() => {
+    const isVisible = Math.random() > 0.5; // Random flicker effect
+    sweetheartNeon.style.opacity = isVisible ? '1' : '0.8';
+}, 300); // Adjust timing for flicker
