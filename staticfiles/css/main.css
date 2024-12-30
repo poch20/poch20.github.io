@@ -229,17 +229,37 @@ header p.sexy-sassy {
 .spotify-button {
   background-color: #ff69b4;
   color: #fff;
+  display: block;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-size: 1.2rem;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
+  margin: 10px auto;
   margin-bottom: 10px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* all 0.3s ease; */
+  animation: buttonBounce 1.5s ease-in-out infinite alternate;
 }
 
 .spotify-button:hover {
   background-color: #ff007f;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #ff33cc, 0 0 20px #ff66ff, 0 0 30px #ff99ff;
+}
+
+/* Toggle Button Playful Glow */
+@keyframes buttonBounce {
+  from {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px #ff007f, 0 0 15px #ff33cc, 0 0 20px #ff66ff;
+  }
+  to {
+    transform: translateY(5px);
+    box-shadow: 0 0 15px #ff33cc, 0 0 25px #ff66ff, 0 0 35px #ff99ff;
+  }
 }
 
 #spotify-player {
