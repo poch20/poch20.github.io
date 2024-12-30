@@ -4,9 +4,14 @@ const spotifyPlayer = document.getElementById('spotify-player');
 
 // Toggle Spotify Player Visibility
 musicButton.addEventListener('click', () => {
-  const isHidden = spotifyPlayer.style.display === 'none';
+  const isHidden = spotifyPlayer.style.display === 'none' || spotifyPlayer.style.display === '';
   spotifyPlayer.style.display = isHidden ? 'block' : 'none';
-  musicButton.textContent = isHidden ? 'TIGHT' : 'SHOW';
+  musicButton.textContent = isHidden ? 'TIGHT' : 'SHOW'; // Clearer button labels
+});
+
+// Ensure Spotify iframe reloads when toggled
+spotifyPlayer.addEventListener('load', () => {
+  spotifyPlayer.contentWindow.location.reload(true);
 });
 
 // Smooth Parallax Scroll Effect
