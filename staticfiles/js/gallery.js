@@ -6,7 +6,7 @@ const spotifyPlayer = document.getElementById('spotify-player');
 musicButton.addEventListener('click', () => {
   const isHidden = spotifyPlayer.style.display === 'none';
   spotifyPlayer.style.display = isHidden ? 'block' : 'none';
-  musicButton.textContent = isHidden ? 'HIDE' : 'SHOW';
+  musicButton.textContent = isHidden ? 'TIGHT' : 'SHOW';
 });
 
 // Smooth Parallax Scroll Effect
@@ -25,4 +25,12 @@ window.addEventListener('scroll', () => {
       section.style.transform = 'translateY(50px)';
     }
   });
+});
+
+// Adjust Button Text Responsiveness
+musicButton.addEventListener('mouseover', () => {
+  musicButton.style.backgroundColor = '#ff007f';
+});
+musicButton.addEventListener('mouseleave', () => {
+  musicButton.style.backgroundColor = '#ff69b4';
 });
