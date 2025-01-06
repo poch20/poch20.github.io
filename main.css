@@ -1,0 +1,484 @@
+/* General Styles */
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  font-family: 'Arial', sans-serif;
+  color: #eee;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #000;  /*#1b1b1b;*/
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px #ff69b4;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #ff69b4;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493, 0 0 30px #ff69b4;
+    animation: neon-flicker 2s infinite;
+}
+
+/* Neon Text Animation */
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493, 0 0 30px #ff69b4;
+  }
+  20%, 24%, 55% {
+    text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff1493, 0 0 15px #ff69b4;
+  }
+}
+/* header h1 {
+  font-size: 3rem;
+  font-family: 'Brush Script MT', cursive;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(0, 255, 0, 0.8),
+    0 0 30px rgba(0, 0, 255, 0.8),
+    0 0 40px rgba(255, 0, 255, 0.8);
+  animation: rgbPulse 2s infinite alternate;
+} */
+
+/* Keyframes for RGB Pulse */
+@keyframes rgbPulse {
+  from {
+    text-shadow:
+      0 0 15px rgba(255, 0, 0, 0.8),
+      0 0 25px rgba(0, 255, 0, 0.8),
+      0 0 35px rgba(0, 0, 255, 0.8),
+      0 0 45px rgba(255, 0, 255, 0.8);
+    transform: scale(1);
+  }
+  to {
+    text-shadow:
+      0 0 20px rgba(255, 255, 0, 0.8),
+      0 0 30px rgba(0, 255, 255, 0.8),
+      0 0 40px rgba(255, 0, 255, 0.8),
+      0 0 50px rgba(255, 105, 180, 0.8);
+    transform: scale(1.1);
+  }
+}
+
+header .highlight {
+  font-size: 3.5rem;
+  color: #ff5c8d;
+  font-weight: bold;
+  text-shadow:
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(255, 255, 0, 0.8),
+    0 0 30px rgba(0, 255, 255, 0.8),
+    0 0 40px rgba(255, 105, 180, 0.8);
+  animation: neonFlicker 1.8s infinite alternate;
+}
+
+/* Neon Flicker for SP♥T */
+@keyframes neonFlicker {
+  0%, 100% {
+    color: rgba(255, 51, 204, 0.8);
+    text-shadow:
+      0 0 5px rgba(14, 209, 225, 0.8),
+      0 0 10px rgba(225, 14, 174, 0.8),
+      0 0 15px rgba(209, 27, 94, 0.8);
+  }
+  50% {
+    color: rgba(255, 105, 180, 1);
+    text-shadow:
+      0 0 15px rgba(209, 27, 94, 0.8),
+      0 0 20px rgba(194, 226, 105, 0.8),
+      0 0 25px rgba(0, 0, 255, 0.8);
+  }
+}
+
+/* Sexy & Sassy Tagline */
+header p.vibes {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #ff69b4;
+  margin-top: 10px;
+  animation: sassyBounce 1.5s ease-in-out infinite alternate;
+  text-shadow:
+    0 0 5px rgba(255, 105, 180, 0.7),
+    0 0 10px rgba(255, 182, 193, 0.8),
+    0 0 15px rgba(255, 20, 147, 1);
+}
+
+/* Bouncy Sassy Animation for Tagline */
+@keyframes sassyBounce {
+  from {
+    transform: translateY(-5px);
+    text-shadow:
+      0 0 5px rgba(255, 20, 147, 0.8),
+      0 0 10px rgba(255, 105, 180, 0.8),
+      0 0 15px rgba(255, 182, 193, 1);
+  }
+  to {
+    transform: translateY(5px);
+    text-shadow:
+      0 0 10px rgba(255, 182, 193, 1),
+      0 0 15px rgba(255, 20, 147, 0.8),
+      0 0 20px rgba(255, 105, 180, 0.8);
+  }
+}
+
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════
+ Parallax Sweettums after header
+══════════════════════════════════════════════════════════════════════════════════════════ */
+.parallax-sweettums {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.parallax-sweettums:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+    .sweettums {
+        height: auto;
+        padding: 10vh 0;
+    }
+}
+.sweettums {
+    background-image: url(sweetheart-bg.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sweetheart-signage {
+  padding: 0 10%;
+}
+
+.sweetheart-signage h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 20px #ff69b4, 0 0 30px #ff1493, 0 0 40px #ff69b4;
+  animation: neon-glow 1.5s ease-in-out infinite;
+}
+
+/* Neon Glow Animation */
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff1493, 0 0 20px #ff69b4;
+  }
+  50% {
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493, 0 0 30px #ff69b4;
+  }
+  100% {
+    text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff1493, 0 0 20px #ff69b4;
+  }
+}
+
+.sweetheart-signage p {
+    color: #ffb3d9;
+}
+
+@media screen and (max-width: 768px) {
+    .sweetheart-signage p {
+        font-size: 1rem;
+    }
+}
+/* ══════════════════════════════════════════════════════════════════════════════════════════
+ Parallax Sweettums Mirage
+══════════════════════════════════════════════════════════════════════════════════════════ */
+.takte {
+    background-image: url(thoughts-bg.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.takte:before {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 50%;
+    margin: 0 auto 15px;
+    background: linear-gradient(90deg, #ff69b4, #ff1493);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .takte h3 {
+        font-size: 1.8rem;
+    }
+}
+.takte h3 {
+    font-size: 2rem;
+    color: #ff69b4;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 105, 180, 0.5);
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .takte p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+}
+
+.takte p {
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .takte {
+        height: auto;
+        padding: 10vh 5%;
+    }
+}
+/* ══════════════════════════════════════════════════════════════════════════════════════════
+ Parallax Section SJDM | Gallery | Thoughts Group
+══════════════════════════════════════════════════════════════════════════════════════════ */
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll; /* Parallax effect disabled on mobile for performance */
+    }
+}
+
+.parallax {
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.parallax-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════
+  Parallax Section
+══════════════════════════════════════════════════════════════════════════════════════════ */
+
+/* Sweetheart Section
+.sweetheart {
+    background-image: url(sweetheart-bg.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .sweetheart {
+        height: auto;
+        padding: 10vh 0;
+    }
+}*/
+/* ══════════════════════════════════════════════════════════════════════════════════════════
+  Mirror Parallax Section
+══════════════════════════════════════════════════════════════════════════════════════════ */
+
+/* Mirror Section */
+.mirror {
+    background-image: url('sweetheart-bg.png');
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════
+ Gallery Parallax Section
+══════════════════════════════════════════════════════════════════════════════════════════ */
+
+/* Responsive Styles */
+/* @media (max-width: 768px) {
+    .gallery-bg img {
+        width: 80%;
+    }
+} */
+
+/* Gallery Section */
+.gallery-bg {
+    background-image: url('cozy_bar_set.webp');
+}
+
+#gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 30px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+#gallery-container img {
+  width: 30%;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+#gallery-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff69b4;
+}
+
+@media (max-width: 768px) {
+    #gallery-container {
+        font-size: 0.9rem;
+        margin: 20px 10px;
+    }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════
+ Gallery Parallax Section
+══════════════════════════════════════════════════════════════════════════════════════════ */
+
+.thoughts-bg {
+    background-image: url('DALL·E_20241229.webp');
+}
+
+/* Thoughts Section */
+.thoughts {
+    padding: 30px;
+    text-align: center;
+    background-color: #222;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════
+ Spotify Section
+══════════════════════════════════════════════════════════════════════════════════════════ */
+
+/* Container  */
+.spotify {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+#spotify-player {
+    display: none;
+    margin: 20px auto;
+    border-radius: 8px;
+    width: 100%;
+}
+#music-button {
+    background-color: #ff69b4;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* all 0.3s ease; */
+    animation: buttonBounce 1.5s ease-in-out infinite alternate;
+}
+
+#music-button:hover {
+    background-color: #ff007f;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ff33cc, 0 0 20px #ff66ff, 0 0 30px #ff99ff;
+}
+
+@media (max-width: 576px) {
+  #music-button {
+    font-size: 1rem;
+  }
+}
+
+/* Toggle Button Playful Glow */
+@keyframes buttonBounce {
+  from {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px #ff007f, 0 0 15px #ff33cc, 0 0 20px #ff66ff;
+  }
+  to {
+    transform: translateY(5px);
+    box-shadow: 0 0 15px #ff33cc, 0 0 25px #ff66ff, 0 0 35px #ff99ff;
+  }
+}
+/* ══════════════════════════════════════════════════════════════════════════════════════════
+Footer
+══════════════════════════════════════════════════════════════════════════════════════════ */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #2c3e50, #4ca1af);
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
+  border-top: 2px solid rgba(255, 105, 180, 0.5);
+  position: relative;
+}
+
+footer p {
+  margin: 0;
+  padding: 5px 0;
+  line-height: 1.6;
+}
+
+footer:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff1493, #ff69b4);
+  animation: glowing-line 3s infinite;
+}
+
+@keyframes glowing-line {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
