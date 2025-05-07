@@ -204,7 +204,7 @@ header p.vibes {
  Parallax Sweettums Mirage
 ══════════════════════════════════════════════════════════════════════════════════════════ */
 .takte {
-    background-image: url(thoughts-bg.jpg);
+    background-image: url(sweetheart-bg.png);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -311,7 +311,7 @@ header p.vibes {
 
 /* Mirror Section */
 .mirror {
-    background-image: url('Cute.png');
+    background-image: url('Sega.png');
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════════════════
@@ -330,33 +330,69 @@ header p.vibes {
     background-image: url('cozy_bar_set.webp');
 }
 
-#gallery-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
-    text-align: center;
-    margin: 30px 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-#gallery-container img {
-  width: 30%;
-  border-radius: 8px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-#gallery-container img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #ff69b4;
+#gallery-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 30px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
-@media (max-width: 768px) {
-    #gallery-container {
-        font-size: 0.9rem;
-        margin: 20px 10px;
-    }
+#gallery-container {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  flex-grow: 1;
+  max-width: 100%;
 }
+
+.image-track {
+  display: flex;
+  gap: 10px;
+}
+
+.image-track img {
+  height: auto;
+  width: 80vw;
+  max-width: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.image-track img:hover {
+  transform: scale(1.03);
+}
+
+.nav-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Optional mobile tweak */
+@media (max-width: 768px) {
+  .image-track img {
+    width: 70vw;
+  }
+}
+
+
 
 /* ══════════════════════════════════════════════════════════════════════════════════════════
  Gallery Parallax Section

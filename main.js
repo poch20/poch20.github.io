@@ -1,4 +1,6 @@
-// Fade-in Effect for Parallax Content
+// -----------------------------------
+// Parallax Fade-in Effect
+// -----------------------------------
 const parallaxSections = document.querySelectorAll('.parallax-content');
 window.addEventListener('scroll', () => {
     parallaxSections.forEach(section => {
@@ -15,16 +17,49 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// -----------------------------------
 // Spotify Player Toggle
+// -----------------------------------
 const spotifyPlayer = document.getElementById('spotify-player');
 const musicButton = document.getElementById('music-button');
 
 musicButton.addEventListener('click', () => {
-    if (spotifyPlayer.style.display === 'none' || spotifyPlayer.style.display === '') {
-        spotifyPlayer.style.display = 'block';
-        musicButton.textContent = 'TIGHT'; // Sexy vibe 😉
-    } else {
-        spotifyPlayer.style.display = 'none';
-        musicButton.textContent = 'BUKA'; // Chill vibe 🥴
+    const isHidden = spotifyPlayer.style.display === 'none' || spotifyPlayer.style.display === '';
+    spotifyPlayer.style.display = isHidden ? 'block' : 'none';
+    musicButton.textContent = isHidden ? 'TIGHT' : 'BUKA'; // ✨ Sexy vibes!
+});
+
+// -----------------------------------
+// Image Gallery Navigation (Smooth Scroll + Touch)
+// -----------------------------------
+const galleryContainer = document.getElementById('gallery-container');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+
+const scrollAmount = 300; // amount of px to scroll per arrow click
+
+prevBtn.addEventListener('click', () => {
+    galleryContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+nextBtn.addEventListener('click', () => {
+    galleryContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
+
+// -----------------------------------
+// Touch Swipe Support (Mobile)
+// -----------------------------------
+let touchStartX = 0;
+galleryContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+});
+
+galleryContainer.addEventListener('touchend', (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchEndX - touchStartX;
+    const swipeThreshold = 50;
+
+    if (Math.abs(diff) > swipeThreshold) {
+        galleryContainer.scrollBy({ left: -diff, behavior: 'smooth' });
     }
 });
