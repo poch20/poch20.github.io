@@ -63,3 +63,57 @@ galleryContainer.addEventListener('touchend', (e) => {
         galleryContainer.scrollBy({ left: -diff, behavior: 'smooth' });
     }
 });
+
+// -----------------------------------
+// Image Modal Viewer with Navigation
+// -----------------------------------
+const modal = document.createElement('div');
+modal.id = 'image-modal';
+modal.innerHTML = `
+    <div class="modal-content">
+        <span id="modal-close">&times;</span>
+        <img id="modal-image" src="" alt="Image Preview" />
+        <button id="modal-prev">&#8592;</button>
+        <button id="modal-next">&#8594;</button>
+    </div>
+`;
+document.body.appendChild(modal);
+
+const allImages = document.querySelectorAll('#gallery-container img');
+const modalImg = document.getElementById('modal-image');
+const modalClose = document.getElementById('modal-close');
+const modalPrev = document.getElementById('modal-prev');
+const modalNext = document.getElementById('modal-next');
+
+let currentImgIndex = 0;
+
+allImages.forEach((img, index) => {
+    img.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        currentImgIndex = index;
+    });
+});
+
+function updateModalImage() {
+    modalImg.src = allImages[currentImgIndex].src;
+}
+
+modalClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+modalPrev.addEventListener('click', () => {
+    currentImgIndex = (currentImgIndex - 1 + allImages.length) % allImages.length;
+    updateModalImage();
+});
+
+modalNext.addEventListener('click', () => {
+    currentImgIndex = (currentImgIndex + 1) % allImages.length;
+    updateModalImage();
+});
+
+// Close modal when tapping outside the image
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+});
